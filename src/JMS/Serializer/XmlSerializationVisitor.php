@@ -362,7 +362,7 @@ class XmlSerializationVisitor extends AbstractVisitor
     public function createDocument($version = null, $encoding = null, $addRoot = true)
     {
         $doc = new \DOMDocument($version ?: $this->defaultVersion, $encoding ?: $this->defaultEncoding);
-        $doc->formatOutput = true;
+        $doc->formatOutput = false;
 
         if ($addRoot) {
             if ($this->defaultRootNamespace) {
